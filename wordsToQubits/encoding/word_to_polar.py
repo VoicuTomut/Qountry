@@ -14,17 +14,17 @@ def put_word_on_sphere(params, qubit):
     :param qubit:
     """
 
-    if params[2] != 0:
+    if params[2] != 0.0:
         theta = np.arctan(np.sqrt(params[0] * params[0] + params[1] * params[1]) / params[2])
     else:
         theta = np.pi / 2
 
-    if params[0] != 0:
+    if params[0] != 0.0:
         phi = np.arctan(params[1] / params[0])
     else:
         phi = np.pi / 2
 
-    if params[1] * params[1] == 1:
+    if params[1] * params[1] == 1.0:
         phi = np.pi / 2
         theta = -params[1] * np.pi / 2
 
